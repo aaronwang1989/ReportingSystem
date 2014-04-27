@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="img/icon.ico">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bbGrid.css">
   </head>
   <body>
   <!------------------------------------------- Navigation Bar -------------------------------------------------------------->
@@ -80,7 +81,6 @@
 				<p>Name: Aaron</p>
 				<p>Address: 24 Trowbridge Rd, Worcester, MA, 01609</p>
 				<p>Daytime telephone: 123-456-789</p>
-				<button type="button" id="addallegedvictim" name="addallegedvictim" class="btn btn-default" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-cog"></span>&nbsp;Change</button>
 				  </div>
 				</div>
 				
@@ -114,7 +114,7 @@
 				<div class="form-group">
 				  <label class="col-md-4 control-label" for="addallegedvictim">Alleged Victim </label>
 				  <div class="col-md-4">
-				    <button type="button" id="addallegedvictim" name="addallegedvictim" class="btn btn-default" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
+				    <button type="button" id="addallegedvictim" name="addallegedvictim" class="btn btn-default" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
 				  </div>
 				</div>
 				
@@ -122,7 +122,7 @@
 				<div class="form-group">
 				  <label class="col-md-4 control-label" for="addallegedabuser">Alleged Abuser</label>
 				  <div class="col-md-4">
-				    <button type="button" id="addallegedabuser" name="addallegedabuser" class="btn btn-default" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
+				    <button type="button" id="addallegedabuser" name="addallegedabuser" class="btn btn-default" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
 				  </div>
 				</div>
 				
@@ -330,13 +330,25 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Add Reporter</h4>
+        <h4 class="modal-title" id="myModalLabel">Add Victim</h4>
       </div>
       <div class="modal-body">
       <!-- Example Table -->
-            <div class="row">
-        <div id="no-more-tables">
-            <table class="col-md-12 table-bordered table-striped table-condensed cf" style="padding:0px; width: 100%;">
+        <div class="row">
+          <div class="col-xs-12" style="padding:0px">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#pane1" data-toggle="tab" ><b>Staffs</b></a></li>
+              <li><a href="#pane2" data-toggle="tab"><b>Patients</b></a></li>
+            </ul>
+          </div>
+      <div id="addVictim" class="tab-content">
+        <div id="pane1" class="tab-pane active">
+          <div class="col-md-12" style="padding:3px">
+ 	         <input id="filter" type="text" class="form-control" placeholder="Search..." >
+		  </div>
+        <div id="no-more-tables" style="padding:3px">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf table-hover" style="padding:0px; width: 100%;">
+            
         		<thead class="cf">
         			<tr>
         				<th>Employee ID</th>
@@ -345,45 +357,45 @@
         				<th>Day Time Phone</th>
         			</tr>
         		</thead>
-        		<tbody>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        		<tbody class="searchable">
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
         			</tr>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
         			</tr>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
         			</tr>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
         			</tr>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        			<tr >
+         				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
         			</tr>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
         			</tr>
-        			<tr>
-        				<td data-title="Employee ID"><a href="http://www.example.com/" style="font-weight:bold">12345678</a></td>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
         				<td data-title="Name">Aaron</td>
         				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
         				<td data-title="Day Time Phone">333-444-5555</td>
@@ -391,6 +403,69 @@
         		</tbody>
         	</table>
         </div>
+      </div>
+            <div id="pane2" class="tab-pane">
+          <div class="col-md-12" style="padding:3px">
+ 	         <input id="filter2" type="text" class="form-control" placeholder="Search..." >
+		  </div>
+        <div id="no-more-tables" style="padding:3px">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf table-hover" style="padding:0px; width: 100%;">
+        		<thead class="cf">
+        			<tr>
+        				<th>Patient ID</th>
+        				<th>Name</th>
+        				<th>Address</th>
+        				<th>Day Time Phone</th>
+        			</tr>
+        		</thead>
+        		<tbody class="searchable2">
+        			<tr data-row-key="1">
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+         				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+      </div>
+      </div>
     </div>
       </div>
       <div class="modal-footer">
@@ -407,10 +482,143 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Add Abuser</h4>
       </div>
       <div class="modal-body">
-        ...
+      <!-- Example Table -->
+        <div class="row">
+          <div class="col-xs-12" style="padding:0px">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#pane1" data-toggle="tab" ><b>Staffs</b></a></li>
+              <li><a href="#pane2" data-toggle="tab"><b>Patients</b></a></li>
+            </ul>
+          </div>
+      <div id="addVictim" class="tab-content">
+        <div id="pane1" class="tab-pane active">
+          <div class="col-md-12" style="padding:3px">
+ 	         <input id="filter" type="text" class="form-control" placeholder="Search..." >
+		  </div>
+        <div id="no-more-tables" style="padding:3px">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf table-hover" style="padding:0px; width: 100%;">
+            
+        		<thead class="cf">
+        			<tr>
+        				<th>Employee ID</th>
+        				<th>Name</th>
+        				<th>Address</th>
+        				<th>Day Time Phone</th>
+        			</tr>
+        		</thead>
+        		<tbody class="searchable">
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+         				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Employee ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+      </div>
+            <div id="pane2" class="tab-pane">
+          <div class="col-md-12" style="padding:3px">
+ 	         <input id="filter2" type="text" class="form-control" placeholder="Search..." >
+		  </div>
+        <div id="no-more-tables" style="padding:3px">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf table-hover" style="padding:0px; width: 100%;">
+        		<thead class="cf">
+        			<tr>
+        				<th>Patient ID</th>
+        				<th>Name</th>
+        				<th>Address</th>
+        				<th>Day Time Phone</th>
+        			</tr>
+        		</thead>
+        		<tbody class="searchable2">
+        			<tr data-row-key="1">
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+         				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        			<tr >
+        				<td data-title="Patient ID">12345678</td>
+        				<td data-title="Name">Aaron</td>
+        				<td data-title="Address">24 Trowbridge Rd, Worcester, MA, 01609</td>
+        				<td data-title="Day Time Phone">333-444-5555</td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+      </div>
+      </div>
+    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -420,26 +628,53 @@
   </div>
 </div>
 
-<!-- Modal 3-->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Add</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/bbGrid.js"></script>
+    <script type='text/javascript'>   
+		$(document).ready(function () {
+		
+		    (function ($) {
+		
+		        $('#filter').keyup(function () {
+		
+		            var rex = new RegExp($(this).val(), 'i');
+		            $('.searchable tr').hide();
+		            $('.searchable tr').filter(function () {
+		                return rex.test($(this).text());
+		            }).show();
+		
+		        })
+		
+		    }(jQuery));
+		
+		});
+	
+		$(document).ready(function () {
+			
+		    (function ($) {
+		
+		        $('#filter2').keyup(function () {
+		
+		            var rex = new RegExp($(this).val(), 'i');
+		            $('.searchable2 tr').hide();
+		            $('.searchable2 tr').filter(function () {
+		                return rex.test($(this).text());
+		            }).show();
+		
+		        })
+		
+		    }(jQuery));
+		
+		});
+		
+		$(document).ready(function(){
+		    $('table.table-striped tbody tr').on('click', function () {
+		        $(this).closest('table').find('td').removeClass('bg');
+		        $(this).find('td').addClass('bg');
+		    });
+		});
+	</script>
+    
   </body>
 </html>
