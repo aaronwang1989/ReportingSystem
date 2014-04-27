@@ -63,20 +63,21 @@
     <div class="container" style="padding-top:80px">
 <div class="container">
     <div class="row">
-        <div class="col-xs-6" style="padding:0px">
+        <div class="col-xs-12" style="padding:0px">
             <h3 class="text-left">
                 Created Abuse Reports
             </h3> 
         </div>
-        <div class="col-xs-6" style="padding:0px">
-            <h3 class="text-right">
-                <a id="btn-create" type="button" class="btn btn-primary" href="CreateAbuseReportCreatePage.jsp"><i class="glyphicon glyphicon-plus"></i>&nbsp;New Abuse Report</a>
-            </h3> 
-        </div>
       </div>
       <div class="row">
-        <div id="no-more-tables">
-            <table class="col-md-12 table-bordered table-striped table-condensed cf" style="padding:0px; width: 100%;">
+      	<div class="col-md-8" style="padding:3px">
+			 <a id="btn-create" type="button" class="btn btn-primary" href="CreateAbuseReportCreatePage.jsp"><i class="glyphicon glyphicon-plus"></i>&nbsp;New Abuse Report</a>
+        </div>
+        <div class="col-md-4" style="padding:3px">
+ 			 <input id="filter" type="text" class="form-control" placeholder="Search..." >
+		</div>
+        <div id="no-more-tables" style="padding:3px"> 		               
+            <table class="col-md-12 table-bordered table-striped table-condensed cf " style="padding:0px; width: 100%;">
         		<thead class="cf">
         			<tr>
         				<th>Abuse Report No.</th>
@@ -87,8 +88,8 @@
         				<th>Operations</th>
         			</tr>
         		</thead>
-        		<tbody>
-        			<tr>
+        		<tbody class="searchable">
+        			<tr >
         				<td data-title="Abuse Report No."><a href="CreateAbuseReportViewSingle.jsp" style="font-weight:bold">12345678</a></td>
         				<td data-title="Reporter">Aaron</td>
         				<td data-title="Status">Submitted</td>
@@ -250,7 +251,33 @@
     </div>
   </div>
 </div>
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/bootstrap.js"></script>
+
+    <script type='text/javascript' src="js/jquery-1.11.0.js"></script>
+    <script type='text/javascript' src="js/bootstrap.js"></script>
+    
+    <script type='text/javascript'>   
+		$(document).ready(function () {
+		
+		    (function ($) {
+		
+		        $('#filter').keyup(function () {
+		
+		            var rex = new RegExp($(this).val(), 'i');
+		            $('.searchable tr').hide();
+		            $('.searchable tr').filter(function () {
+		                return rex.test($(this).text());
+		            }).show();
+		
+		        })
+		
+		    }(jQuery));
+		
+		});
+
+		$('.table-hover tr').click(function() {
+		    var rowId = $(this).data("rowKey");
+		    alert(rowId);
+		});
+</script>
   </body>
 </html>
