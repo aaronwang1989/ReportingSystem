@@ -99,9 +99,9 @@
 
 			<!-- Action 4 -->
 			<div class="form-group">
-			  <label class="col-md-4 control-label" for="action4">Action 4: </label>
+			  <label class="col-md-4 control-label" for="action4">Action 4: Add Disposition Letter: </label>
 			  <div class="col-md-4">                     
-			    <input id="filebutton2" name="actoin4" class="input-file" type="file">			    
+		      <button type="button" id="addDispositionLetter" name="action1" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add</button>
 			  </div>
 			</div>
 
@@ -109,7 +109,7 @@
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="action5">Action 5: </label>
 			  <div class="col-md-4">                     
-			    <input id="filebutton3" name="action5" class="input-file" type="file">
+			    N/A
 			  </div>
 			</div>
 
@@ -117,7 +117,7 @@
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="action6">Action 6: </label>
 			  <div class="col-md-4">                     
-			    <input id="filebutton4" name="action6" class="input-file" type="file">
+			    N/A
 			  </div>
 			</div>
 			
@@ -380,6 +380,28 @@
     </div>
   </div>
 </div>
+
+           <!-- Modal 2-->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add Disposition Letter</h4>
+      </div>
+      <div class="modal-body">
+      <b>Please choose a local file to add:</b></br></br>                   
+			    <input id="filebutton3" name="action5" class="input-file" type="file">
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
        <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.js"></script>
   </body>
